@@ -1,0 +1,26 @@
+.birds {
+    background-image: url("../../media/img/gif/birds.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100px;
+    position: absolute;
+    top: 200px;
+    left: 100vw;
+}
+
+.birds-animate {
+    animation-name: birds-animation;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes birds-animation {
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: -15vw;
+    }
+}

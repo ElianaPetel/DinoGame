@@ -1,0 +1,17 @@
+.spinnerPage {
+  position: absolute;
+  left: 35%;
+  top: 25%;
+}
+
+.dinoSpinner {
+  width: 30vw;
+  height: auto;
+}
+
+.loading {
+  width: 100%;
+  text-align: center;
+  color: aqua;
+  margin: 5%;
+}
