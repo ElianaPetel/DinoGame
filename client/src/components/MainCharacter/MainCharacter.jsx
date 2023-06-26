@@ -184,7 +184,7 @@ const MainCharacter = () => {
       jump.currentTime = 0;
     }
   }, [isPlayMusic]);
-  console.log(userCredentials);
+  //console.log(userCredentials);
   return (
     <div className="mainCharacter-container">
       {!die && (

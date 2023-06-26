@@ -16,7 +16,7 @@ const Score = () => {
       }, 100);
     }
   }, [dispatch, play, score, die]);
-console.log('from the score component', {score})
+//console.log('from the score component', {score})
   return (
     <div className="score-container">
       {play && <p className="score">Score: {score}</p>}

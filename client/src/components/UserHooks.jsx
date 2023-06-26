@@ -35,16 +35,16 @@ export default function useUserHooks() {
       body: raw,
       redirect: "follow",
     };
-    fetch("http://localhost:4000/users/verify", requestOptions)
+    fetch("https://dino-trex-game.glitch.me/users/verify", requestOptions)
       .then((response) => response.text())
-      .then((result) => console.log(result))
+      //.then((result) => console.log(result))
       .catch((error) => console.log("error", error));
   }
 
   async function updateProfile(newProfile) {
     myHeaders.append("Content-Type", "application/json");
     try {
-      const response = await fetch("http://localhost:4000/users/profile", {
+      const response = await fetch("https://dino-trex-game.glitch.me/users/profile", {
         method: "PUT",
         headers: myHeaders,
         body: JSON.stringify(newProfile),
@@ -67,7 +67,7 @@ export default function useUserHooks() {
       headers: myHeaders,
     };
 
-    fetch("http://localhost:4000/users/profile", requestOptions)
+    fetch("https://dino-trex-game.glitch.me/users/profile", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         setUserCredentials(result);
@@ -86,7 +86,7 @@ export default function useUserHooks() {
 
     try {
       const response = await fetch(
-        "http://localhost:4000/users/upload",
+        "https://dino-trex-game.glitch.me/users/upload",
         requestOptions
       );
       const uploadedPic = await response.json();
@@ -123,7 +123,7 @@ export default function useUserHooks() {
 
     try {
       const response = await fetch(
-        "http://localhost:4000/users/update-character",
+        "https://dino-trex-game.glitch.me/users/update-character",
         requestOptions
       );
       const updatedChar = await response.json();
@@ -140,11 +140,11 @@ export default function useUserHooks() {
 
   function handlePostScores(score) {
     if (score !== 0) {
-      console.log("from the UserHook component", { score });
+      //console.log("from the UserHook component", { score });
       dispatch(setLoadingScreen(true));
       myHeaders.append("Content-Type", "application/json");
 
-      fetch("http://localhost:4000/users/result", {
+      fetch("https://dino-trex-game.glitch.me/users/result", {
         method: "POST",
         headers: myHeaders,
         body: JSON.stringify({ score: score + 1 }),
@@ -169,7 +169,7 @@ export default function useUserHooks() {
     };
     try {
       const response = await fetch(
-        "http://localhost:4000/users/register",
+        "https://dino-trex-game.glitch.me/users/register",
         settings
       );
       const signUp = await response.json();
@@ -195,7 +195,7 @@ export default function useUserHooks() {
     };
     try {
       const response = await fetch(
-        "http://localhost:4000/users/login",
+        "https://dino-trex-game.glitch.me/users/login",
         settings
       );
       const login = await response.json();
@@ -224,7 +224,7 @@ export default function useUserHooks() {
     };
     try {
       const response = await fetch(
-        "http://localhost:4000/users/top-results-global",
+        "https://dino-trex-game.glitch.me/users/top-results-global",
         settings
       );
       const results = await response.json();

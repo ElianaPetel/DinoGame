@@ -76,7 +76,7 @@ export default function UserProfile() {
                   className="photo-upload"
                   src={
                     userCredentials?.avatar
-                      ? `http://localhost:4000/images/${userCredentials.avatar}`
+                      ? `https://dino-trex-game.glitch.me/images/${userCredentials.avatar}`
                       : userIconeBeforeUpload
                   }
                 />

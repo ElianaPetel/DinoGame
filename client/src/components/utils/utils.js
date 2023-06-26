@@ -10,10 +10,10 @@ export const verifyUser = (cb, cb2) => {
   if (localStorage.getItem("token")) {
     axios
       .get(
-        `http://localhost:4000/users/verify/${localStorage.getItem("token")}`
+        `https://dino-trex-game.glitch.me/users/verify/${localStorage.getItem("token")}`
       )
       .then((res) => {
-        console.log(res.data);
+        //console.log(res.data);
         cb(res.data);
       })
       .catch((err) => {
