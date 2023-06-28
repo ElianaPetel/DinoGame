@@ -1,0 +1,59 @@
+.mainCharacter {
+  height: auto;
+  width: 18%;
+  position: absolute;
+  bottom: 5%;
+  left: 40px;
+}
+
+.smaller {
+  width: 8vw;
+}
+
+.bigger {
+  width: 20vw;
+}
+
+.jump {
+  animation-name: jumping;
+  animation-timing-function: ease-out;
+  animation-duration: 0.4s;
+}
+
+@keyframes jumping {
+  0% {
+    top: 13vh;
+  }
+
+  10% {
+    top: 10vh;
+  }
+
+  50% {
+    top: 10vh;
+  }
+
+  90% {
+    top: 10vh;
+  }
+
+  100% {
+    top: 13vh;
+  }
+}
+
+.die {
+  animation-name: die-animation;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+}
+
+@keyframes die-animation {
+  25% {
+    bottom: 30vh;
+    left: 8vh;
+  }
+  100% {
+    bottom: -20vh;
+  }
+}
